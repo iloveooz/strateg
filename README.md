@@ -1,2 +1,2 @@
 # strateg
-mpv: simple strategy using sfml
+mvp: simple strategy using sfml
