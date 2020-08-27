@@ -3,3 +3,16 @@
 ################################################################################
 
 /Strateg/.vs/Strateg/v16
+/Strateg/Debug
+/Strateg/External/SFML
+/Strateg/sfml-window-d-2.dll
+/Strateg/sfml-window-2.dll
+/Strateg/sfml-system-d-2.dll
+/Strateg/sfml-system-2.dll
+/Strateg/sfml-network-d-2.dll
+/Strateg/sfml-network-2.dll
+/Strateg/sfml-graphics-d-2.dll
+/Strateg/sfml-graphics-2.dll
+/Strateg/sfml-audio-d-2.dll
+/Strateg/sfml-audio-2.dll
+/Strateg/openal32.dll
