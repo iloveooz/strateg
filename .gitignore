@@ -2,7 +2,4 @@
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
 
-/.vs/strateg/v16
-/strateg/x64/Debug
-/x64/Debug
-/strateg/Debug
+/Strateg/.vs/Strateg/v16
