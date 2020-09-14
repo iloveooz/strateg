@@ -13,15 +13,17 @@ public:
 
 	void run();
 
+	void updateDeltaTime();
 	void updateEvents();
 	void update();
 
 	void render();
 
 private:
-	sf::RenderWindow* m_window;
-	sf::Event m_event;
+	sf::RenderWindow* m_renderWindow;
+	sf::Event m_Event;
 
-	double m_delta;
+	sf::Clock m_clockDelta;
+	double m_dDelta;
 };
 

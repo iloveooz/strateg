@@ -1,24 +1,28 @@
 #include "Game.hpp"
 
-Game::Game() : m_window(new sf::RenderWindow(sf::VideoMode(800, 600), "STRATEG!")) {
-    m_window->setFramerateLimit(60);
+Game::Game() : m_renderWindow(new sf::RenderWindow(sf::VideoMode(800, 600), "STRATEG!")) {
+    m_renderWindow->setFramerateLimit(60);
 }
 
 Game::~Game() {
-	delete m_window;
+	delete m_renderWindow;
 }
 
 void Game::run() {
-    while (m_window->isOpen()) {
+    while (m_renderWindow->isOpen()) {
 		update();
 		render();
     }
 }
 
+void Game::updateDeltaTime() {
+    m_dDelta = m_clockDelta.getElapsedTime().asSeconds();
+}
+
 void Game::updateEvents() {
-    while (m_window->pollEvent(m_event)) {
-        if (m_event.type == sf::Event::Closed)
-            m_window->close();
+    while (m_renderWindow->pollEvent(m_Event)) {
+        if (m_Event.type == sf::Event::Closed)
+            m_renderWindow->close();
     }
 }
 
@@ -27,9 +31,9 @@ void Game::update() {
 }
 
 void Game::render() {
-    m_window->clear();
+    m_renderWindow->clear();
 
 	// Rendering items
 
-    m_window->display();
+    m_renderWindow->display();
 }
