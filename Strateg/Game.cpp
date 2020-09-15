@@ -10,13 +10,16 @@ Game::~Game() {
 
 void Game::run() {
     while (m_renderWindow->isOpen()) {
+
+        updateDeltaTime();
+    	
 		update();
 		render();
     }
 }
 
 void Game::updateDeltaTime() {
-    m_dDelta = m_clockDelta.getElapsedTime().asSeconds();
+    m_dDelta = m_clockDelta.restart().asSeconds();
 }
 
 void Game::updateEvents() {
